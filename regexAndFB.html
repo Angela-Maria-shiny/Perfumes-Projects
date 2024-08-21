@@ -1,0 +1,61 @@
+
+<!-- regEx form -->
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="email" type="text" />
+    <button onclick="regEx()">Submit</button>
+
+// firebase sdk set up 
+
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyByrkOXf53QFaa_CQ9vaB0TXLUcD17blkU",
+    authDomain: "perfume-project-8e35b.firebaseapp.com",
+    projectId: "perfume-project-8e35b",
+    storageBucket: "perfume-project-8e35b.appspot.com",
+    messagingSenderId: "487332665810",
+    appId: "1:487332665810:web:b6d9b123e55c57018ad00b",
+    measurementId: "G-5XGLNS4C3Q"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+
+
+    <script>
+      function regEx() {
+        let input1 = document.getElementById("email").value;
+
+        const pattern = /^[a-zA-Z0-9._\+\*]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        //const text = 'angelamariashiny1603@gmail.com'
+        //const result = pattern.test(text);
+        //console.log(result);
+        if(pattern.match(input1)) {
+          alert("Valid email");
+          console.log(input1)
+        } else {
+          alert("Invalid email");
+          console.log(input1)
+        }
+      }
+    </script>
+  </body>
+</html> 

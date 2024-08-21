@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="perfume.css">
+    <link rel="Icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkWWm4Ns7XnWhMWduWOPagihOpN75xVIam3Q&usqp=CAU">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        background-color: white
+      }
+      .container{
+        background-color: rgb(199, 226, 235);
+        width: 500px;
+        height: 300px;
+        border-radius: 30px;
+        margin: 50px 50px 50px 50px;
+        padding: 10px;
+        box-shadow: 10px 12px 15px rgb(95, 116, 116), 10px 12px 15px rgb(185, 204, 204) ;
+        margin: auto;
+        margin-top: 5% ;
+        margin-bottom: 10%;
+      
+      }
+      input[type="text"], input[type="password"], input[type="email"]{
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px ;
+      }
+      input[type="text"], input[type="password"], input[type="email"]:focus{
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px ;
+        background:rgb(202, 224, 231);
+      }
+      .register{
+        background-color: cadetblue;
+        color: aliceblue;
+        width: 100%;
+        padding: 20px;
+      }
+      .register:hover{
+        background-color: rgb(62, 102, 104);
+        opacity: 0.8;
+      }
+      p{
+        margin: 10px;
+      }
+    </style>
+</head>
+<body>
+  <header>  
+    <div class="Header">
+        <nav>
+            <h1>Perfumes</h1>
+            <ul>
+                <li>Home |</li>
+                <li>Products |</li>
+                <li>About Us |</li>
+                <li>Contact Us |</li>
+                <li>FAQ</li>
+
+            </ul>
+        </nav>
+      </header>
+  
+</head>
+<body>
+  <form action="">
+    <div id="signUpMessage" class="messageDiv" style="display:none";></div>
+    <div class="container">
+      <h1 style="text-align: center;"><b style="text-decoration: underline;">Sign In</b></h1>
+      
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" value="" required>
+      <br>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required>
+      <br>
+    
+
+      <p>Create an account<a href="Reg.html"><b style="margin: 2px;"> Sign Up</b></a></p>
+      <button class="register" type="submit" onclick="login()">Login</button>
+
+    </div>
+  </form>
+  <script>
+    function login(){
+      let email = document.getElementById('email');
+      let password = document.getElementById('password');
+
+      if(email.value === 'angelamariashiny1603@gmail.com' && password.value === "123456789"){
+        alert('Logined successfully')
+        window.location.href = 'perfume.html'
+        
+      }
+      else{
+        alert('Invalid email address or password')
+      }
+    }
+  </script>
+  <footer>
+    <div class="Contact US">
+        <h4>Contact Us</h4>
+        <p>9845820117</p>
+        <p>angela.1603@gmailcom</p>
+        <marquee >
+        <p style="margin-top: 30px; font-size: 10px;">Contact us anytime, as we are working hard to provide the best customer Experience to build our brand.</p>
+    </marquee>
+
+    </div>
+</footer>
+</body>
+</html>

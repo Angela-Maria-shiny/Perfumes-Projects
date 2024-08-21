@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfume Zone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: darkturquoise;
+    }
+    .container {
+      background-color: rgb(140, 176, 176);
+      width: 550px;
+      height: 500px;
+      border-radius: 30px;
+      margin: 50px 50px 50px 50px;
+      padding: 10px;
+      box-shadow: 10px 12px 15px rgb(95, 116, 116),
+        10px 12px 15px rgb(185, 204, 204);
+      margin: auto;
+      margin-top: 5%;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      width: 90%;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"]:focus {
+      width: 90%;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      background: rgb(202, 224, 231);
+    }
+    #register {
+      background-color: cadetblue;
+      color: aliceblue;
+      width: 100%;
+      padding: 20px;
+    }
+    #register:hover {
+      background-color: rgb(55, 105, 126);
+      opacity: 0.8;
+    }
+  </style>
+  <script type="module" src="configFB.js" defer></script>
+</head>
+<body>
+  <form method="post" action="" id="registrationForm">
+    <div id="signUpMessage" class="messageDiv" style="display:none";></div>
+    <div class="container">
+      <h1 style="text-align: center">
+        <b style="text-decoration: underline">Sign up</b>
+      </h1>
+      <label for="first-name">First Name</label>
+      <input type="text" name="first-name" id="first-name" required />
+      <br />
+      <label for="last-name">Last Name</label>
+      <input type="text" name="last-name" id="last-name" required />
+      <br />
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required />
+      <br />
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required />
+      <br />
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" name="confirm-password" id="confirm-password" required />
+      <p>Already a member <a href="login.html">Sign In</a></p>
+      <button id="register" class="register" type="submit">Register</button>
+    </div>
+  </form>
+</body>
+</html>
